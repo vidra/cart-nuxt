@@ -16,7 +16,7 @@
 
 
           <!-- Using 'button-content' slot -->
-    <b-button v-b-toggle.sidebar-right>Toggle Sidebar</b-button>
+    <b-button v-b-toggle.sidebar-right>Cart: {{CART.length}}</b-button>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -24,4 +24,13 @@
 
 </template>
 
-
+<script>
+import {mapActions, mapGetters} from 'vuex'
+export default {
+computed: {
+...mapGetters([
+'CART'
+])
+},
+}
+</script>
