@@ -9,7 +9,6 @@
  class="col-md-4"
  />
 </div>
-<div> Cart{{CART.length}}</div>
  </div>
 
 </template>
@@ -24,7 +23,7 @@ uuid: '344-33-20',
 name: 'Camera0',
 description: 'Lorem ipsum dolor sit amet',
 price: 950,
-photoURL: 'https://picsum.photos/500/500/?image=54',
+photoURL: 'https://mykaleidoscope.ru/uploads/posts/2021-09/1632934645_30-mykaleidoscope-ru-p-rospis-pryanikov-glazuryu-master-krasivo-f-30.jpg',
 quantity: 1
 },
 {
@@ -32,7 +31,7 @@ uuid: '344-33-21',
 name: 'Camera1',
 description: 'Lorem ipsum dolor sit amet',
 price: 950,
-photoURL: 'https://picsum.photos/500/500/?image=54',
+photoURL: 'https://mykaleidoscope.ru/uploads/posts/2021-09/1632934645_30-mykaleidoscope-ru-p-rospis-pryanikov-glazuryu-master-krasivo-f-30.jpg',
 quantity: 1
 },
 {
@@ -40,7 +39,7 @@ uuid: '344-33-22',
 name: 'Camera2',
 description: 'Lorem ipsum dolor sit amet',
 price: 950,
-photoURL: 'https://picsum.photos/500/500/?image=54',
+photoURL: 'https://mykaleidoscope.ru/uploads/posts/2021-09/1632934645_30-mykaleidoscope-ru-p-rospis-pryanikov-glazuryu-master-krasivo-f-30.jpg',
 quantity: 1
 }
 

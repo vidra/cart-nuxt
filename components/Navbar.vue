@@ -1,6 +1,6 @@
 <template>
 <div>
-  <b-navbar toggleable="lg" type="dark" variant="info">
+  <b-navbar toggleable="lg" type="light" variant="light" >
     <b-navbar-brand href="#">NavBar</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -16,7 +16,7 @@
 
 
           <!-- Using 'button-content' slot -->
-    <b-button v-b-toggle.sidebar-right>Cart: {{CART.length}}</b-button>
+   <div> <b-icon-cart scale="1.5"  v-b-toggle.sidebar-right></b-icon-cart><span class="incart">{{CART.length}}</span></div>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -34,3 +34,23 @@ computed: {
 },
 }
 </script>
+<style>
+.navbar{
+background-color:#d8f4e2!important;
+border-bottom:solid 0.2em #39b4ac;
+}
+.incart {
+position: relative;
+bottom:10px;
+}
+.incart {
+padding-left: 0.3rem;
+padding-right: 0.3rem;
+background: #088178;
+color:#fff;
+border:solid 0.1em #d9eddb;
+text-align: center;
+display: inline;
+border-radius: 50%;
+}
+</style>
