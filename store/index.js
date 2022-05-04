@@ -1,6 +1,6 @@
+import ProductService from '@/services/ProductService.js'
 export const state = () => ({
   cart:[],
-  counter: 0,
 })
 
 export const getters = {

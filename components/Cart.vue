@@ -2,10 +2,11 @@
 <div>
 <div class="card mb-3" border-variant="success">
 <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
- <a class="ripple" href="#!">
+<nuxt-link :to="'/product/' + product_data.id">
+
 <img :src="product_data.photoURL" class="img-fluid rounded">
 
-    </a>
+    </nuxt-link>
 </div>
  <div class="card-body">
   <small class="text-muted">{{product_data.description}}</small>

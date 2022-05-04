@@ -13,44 +13,29 @@
 
 </template>
 <script>
-import {mapActions, mapGetters} from 'vuex'
+import {mapActions, mapGetters, mapState} from 'vuex'
 export default {
 data(){
 return{
-products:[
-{
-uuid: '344-33-20',
-name: 'Camera0',
-description: 'Lorem ipsum dolor sit amet',
-price: 950,
-photoURL: 'https://mykaleidoscope.ru/uploads/posts/2021-09/1632934645_30-mykaleidoscope-ru-p-rospis-pryanikov-glazuryu-master-krasivo-f-30.jpg',
-quantity: 1
-},
-{
-uuid: '344-33-21',
-name: 'Camera1',
-description: 'Lorem ipsum dolor sit amet',
-price: 950,
-photoURL: 'https://mykaleidoscope.ru/uploads/posts/2021-09/1632934645_30-mykaleidoscope-ru-p-rospis-pryanikov-glazuryu-master-krasivo-f-30.jpg',
-quantity: 1
-},
-{
-uuid: '344-33-22',
-name: 'Camera2',
-description: 'Lorem ipsum dolor sit amet',
-price: 950,
-photoURL: 'https://mykaleidoscope.ru/uploads/posts/2021-09/1632934645_30-mykaleidoscope-ru-p-rospis-pryanikov-glazuryu-master-krasivo-f-30.jpg',
-quantity: 1
-}
-
-
-],
 }
 },
+async fetch({ store, error }) {
+    try {
+      await store.dispatch('products/fetchProducts')
+    } catch (e) {
+      error({
+        statusCode: 503,
+        message: 'Unable to fetch events at this time. Please try again.'
+      })
+    }
+  },
 computed: {
 ...mapGetters([
 'CART'
-])
+]),
+...mapState({
+products: state => state.products.products
+})
 },
 
 methods: {
