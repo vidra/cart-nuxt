@@ -11,12 +11,10 @@
  <div class="card-body">
   <small class="text-muted">{{product_data.description}}</small>
 
-<h5>Name: {{product_data.name}}</h5>
-<div class="row">
+<h5> {{product_data.name}}</h5>
 
- <div class="col"><div class="product-price"> $ {{product_data.price}}</div></div>
-<div class="col"></div>
-<div style=" text-align: right" class="col"><span class="fa"><b-icon-cart-plus scale="1.5"  @click="AddToCart"></b-icon-cart-plus></span></div>
+<div class="product-price"> $ {{product_data.price}}
+<span class="fa"><b-icon-cart-plus scale="1.1"  @click="AddToCart"></b-icon-cart-plus></span>
 </div>
 </div>
 </div>
@@ -67,10 +65,14 @@ padding: 7px;
 .fa {background: #e8f6ea;
 color:#088178;
 border:solid 0.1em #d9eddb;
-padding: 0.6em;
-text-align: center;
+padding: 0.3em;
+padding-left: 0.5em;
+padding-right: 0.5em;
 display: inline;
 border-radius: 50%;
+position:absolute;
+right: 8px;
+bottom:8px;
 }
 </style>
 

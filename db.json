@@ -9,11 +9,12 @@
       "description": "Yay felines!",
       "price" : 20,
        "quantity": 1
+
     },
      {
       "id": 2,
       "uuid": 5928102,
-      "category": "animal welfare",
+      "category": "8March",
       "photoURL": "https://mykaleidoscope.ru/uploads/posts/2021-09/1632934645_30-mykaleidoscope-ru-p-rospis-pryanikov-glazuryu-master-krasivo-f-30.jpg",
       "name": "Cingerbread",
       "description": "Yay felines!",
@@ -23,6 +24,16 @@
      {
       "id": 3,
       "uuid": 5928103,
+      "category": "8March",
+      "photoURL": "https://mykaleidoscope.ru/uploads/posts/2021-09/1632934645_30-mykaleidoscope-ru-p-rospis-pryanikov-glazuryu-master-krasivo-f-30.jpg",
+      "name": "Cingerbread",
+      "description": "Yay felines!",
+      "price" : 20,
+      "quantity": 1
+    },
+        {
+      "id": 4,
+      "uuid": 5928104,
       "category": "animal welfare",
       "photoURL": "https://mykaleidoscope.ru/uploads/posts/2021-09/1632934645_30-mykaleidoscope-ru-p-rospis-pryanikov-glazuryu-master-krasivo-f-30.jpg",
       "name": "Cingerbread",
@@ -30,5 +41,6 @@
       "price" : 20,
       "quantity": 1
     }
+
   ]
 }

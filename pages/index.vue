@@ -6,17 +6,27 @@
 :key="'product-' + index"
 :product_data="product"
 @AddToCart="AddToCart"
- class="col-md-4"
+ class="col-md-3"
  />
+<Select
+:categories="categories"
+@select="categorySelect"
+/>
+<p>selected:{{selected}}</p>
 </div>
- </div>
-
+</div>
 </template>
 <script>
 import {mapActions, mapGetters, mapState} from 'vuex'
 export default {
 data(){
 return{
+categories:[
+{name: 'option1', value: 1},
+{name: 'option2', value: 2}
+],
+selected:'All',
+sortedProducts: []
 }
 },
 async fetch({ store, error }) {
@@ -44,7 +54,14 @@ methods: {
 ]),
 AddToCart(data) {
 this.ADD_TO_CART(data)
+},
+categorySelect(category) {
+this.selected = category.name
 }
 }
 }
 </script>
+<style>
+.menu{
+height: 350px;
+}
