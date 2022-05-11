@@ -2,17 +2,17 @@
 <div class="container">
         <div class="row">
 <Shop />
-<Cart v-for="(product, index) in products"
+<Cart v-for="(product, index) in filteredProducts"
 :key="'product-' + index"
 :product_data="product"
 @AddToCart="AddToCart"
  class="col-md-3"
  />
 <Select
+:selected="selected"
 :categories="categories"
-@select="categorySelect"
+@select="sortByCategories"
 />
-<p>selected:{{selected}}</p>
 </div>
 </div>
 </template>
@@ -22,8 +22,9 @@ export default {
 data(){
 return{
 categories:[
-{name: 'option1', value: 1},
-{name: 'option2', value: 2}
+{name: 'All', value: 'all'},
+{name: 'Birthday', value: 'b'},
+{name: '8March', value: 'm'}
 ],
 selected:'All',
 sortedProducts: []
@@ -45,7 +46,14 @@ computed: {
 ]),
 ...mapState({
 products: state => state.products.products
-})
+}),
+filteredProducts(){
+if (this.sortedProducts.length) {
+return this.sortedProducts
+} else {
+return this.products
+}
+}
 },
 
 methods: {
@@ -55,13 +63,15 @@ methods: {
 AddToCart(data) {
 this.ADD_TO_CART(data)
 },
-categorySelect(category) {
-this.selected = category.name
+sortByCategories(category) {
+this.sortedProducts = []
+let vm = this
+this.products.map(function (item) {
+if (item.category === category.name) {
+vm.sortedProducts.push(item)
+}
+})
 }
 }
 }
 </script>
-<style>
-.menu{
-height: 350px;
-}

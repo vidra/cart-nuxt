@@ -24,6 +24,10 @@ type: Array,
 default() {
 return[]
 }
+},
+selected: {
+type: String,
+default: ''
 }
 },
 data() {

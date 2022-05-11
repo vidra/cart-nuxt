@@ -6,7 +6,11 @@ export const state = () => ({
 export const getters = {
   CART(state) {
     return state.cart
+  },
+  PRODUCTS(state) {
+    return state.products
   }
+
 }
 
 export const actions = {
