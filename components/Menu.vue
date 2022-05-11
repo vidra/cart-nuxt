@@ -1,5 +1,6 @@
 <template>
 <div class="menu">
+Category:
   <b-button pill>Button</b-button>
   <b-button pill variant="primary">Button</b-button>
   <b-button pill variant="outline-secondary">Button</b-button>

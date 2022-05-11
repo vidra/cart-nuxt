@@ -1,5 +1,11 @@
 <template>
 <div class="container">
+<Select
+:selected="selected"
+:categories="categories"
+@select="sortByCategories"
+/>
+
         <div class="row">
 <Shop />
 <Cart v-for="(product, index) in filteredProducts"
@@ -8,11 +14,6 @@
 @AddToCart="AddToCart"
  class="col-md-3"
  />
-<Select
-:selected="selected"
-:categories="categories"
-@select="sortByCategories"
-/>
 </div>
 </div>
 </template>
